@@ -10,11 +10,5 @@ public partial class MainPage : ContentPage
         BindingContext = _vm;
         InitializeComponent();	
 	}
-
-    protected override void OnAppearing()
-    {
-        base.OnAppearing();
-		_vm.FullName = "Chaoran Lu";
-    }
 }
 

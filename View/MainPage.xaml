@@ -2,31 +2,44 @@
 <ContentPage
     x:Class="ForgetMeNotChaoran.View.MainPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
-    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    BackgroundColor="White">
 
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label
+                x:Name="HelloLabel"
+                Margin="20"
+                Padding="10"
+                BackgroundColor="Red"
+                FontAttributes="Bold"
+                FontSize="Small"
+                HeightRequest="50"
+                HorizontalOptions="Center"
+                HorizontalTextAlignment="Center"
+                LineBreakMode="WordWrap"
+                MaxLines="5"
+                Text="{Binding FullName}"
+                TextColor="Yellow"
+                VerticalTextAlignment="Center">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ImageTappedCommand}" />
+                </Label.GestureRecognizers>
+            </Label>
 
-        <Label
-            x:Name="HelloLabel"
-            Margin="20"
-            Padding="10"
-            BackgroundColor="Red"
-            FontAttributes="Bold"
-            FontSize="Small"
-            HorizontalOptions="Center"
-            HorizontalTextAlignment="Center"
-            LineBreakMode="WordWrap"
-            MaxLines="5"
-            Text="{Binding FullName}"
-            TextColor="Yellow"
-            VerticalTextAlignment="Center" />
-
-        <Image
-            HeightRequest="200"
-            HorizontalOptions="Center"
-            RotationX="45"
-            Source="flower.png" />
-
-    </VerticalStackLayout>
+            <Image
+                x:Name="BigFlower"
+                HeightRequest="200"
+                HorizontalOptions="Center"
+                IsVisible="{Binding FlowerIsVisible}"
+                Opacity=".25"
+                RotationX="45"
+                Source="{Binding FavoriteFlower}">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ImageTappedCommand}" NumberOfTapsRequired="2" />
+                </Image.GestureRecognizers>
+            </Image>
+        </VerticalStackLayout>
+    </ScrollView>
 
 </ContentPage>
