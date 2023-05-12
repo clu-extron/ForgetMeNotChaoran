@@ -39,7 +39,7 @@ namespace ForgetMeNotChaoran.ViewModel
         [RelayCommand]
         private void Create()
         {
-            WeakReferenceMessenger.Default.Send(new CreateMessage());
+            WeakReferenceMessenger.Default.Send(new ConstructMessage());
         }
     }
 }
