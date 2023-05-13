@@ -20,7 +20,7 @@ namespace ForgetMeNotChaoran.ViewModel
         private string _password;
 
         [ObservableProperty]
-        private bool activityIndicatorIsRunning = true;
+        private bool _activityIndicatorIsRunning = true;
 
         [RelayCommand]
         private async void Submit()

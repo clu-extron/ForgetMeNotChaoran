@@ -7,15 +7,37 @@
     xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
     xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="Login Page">
+    <ContentPage.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+        <Style x:Key="BaseExplicitLabel" TargetType="Label">
+            <Setter Property="FontSize" Value="Medium" />
+            <Setter Property="HorizontalOptions" Value="Start" />
+            <Setter Property="Margin" Value="10" />
+            <Setter Property="VerticalOptions" Value="Center" />
+            <Setter Property="VerticalTextAlignment" Value="Center" />
+        </Style>
+        <Style
+            x:Key="LargeLabel"
+            BasedOn="{StaticResource BaseExplicitLabel}"
+            TargetType="Label">
+            <Setter Property="FontSize" Value="Large" />
+        </Style>
+        <Style
+            x:Key="SmallLabel"
+            BasedOn="{StaticResource BaseExplicitLabel}"
+            TargetType="Label">
+            <Setter Property="FontSize" Value="Small" />
+        </Style>
+    </ContentPage.Resources>
     <VerticalStackLayout x:Name="LoginStackLayout">
         <HorizontalStackLayout WidthRequest="300">
-            <Label
-                Margin="10,20,10,0"
-                FontSize="Medium"
-                HorizontalOptions="Start"
-                Text="User Name"
-                VerticalOptions="Center"
-                VerticalTextAlignment="Center" />
+            <Label Style="{StaticResource LargeLabel}" Text="User Name" />
             <Entry
                 HorizontalOptions="End"
                 Placeholder="User Name"
@@ -23,13 +45,7 @@
                 WidthRequest="150" />
         </HorizontalStackLayout>
         <HorizontalStackLayout WidthRequest="300">
-            <Label
-                Margin="10,10,10,0"
-                FontSize="Medium"
-                HorizontalOptions="Start"
-                Text="Password"
-                VerticalOptions="Center"
-                VerticalTextAlignment="Center" />
+            <Label Style="{StaticResource SmallLabel}" Text="Password" />
             <Frame BorderColor="Blue" CornerRadius="5">
                 <Entry
                     HorizontalOptions="End"
@@ -62,7 +78,5 @@
                 Text="Forgot Password" />
         </HorizontalStackLayout>
         <Label x:Name="CreateAccount" Text="Create account?" />
-        <!--<ActivityIndicator IsRunning="{Binding ActivityIndicatorIsRunning}" Color="Blue" />-->
-        <!--<ProgressBar x:Name="LoginProgressBar" ProgressColor="gold" />-->
     </VerticalStackLayout>
 </ContentPage>
