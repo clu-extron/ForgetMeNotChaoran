@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 namespace ForgetMeNotChaoran.ViewModel
 {
     [ObservableObject]
-    internal partial class LoginViewModel
+    public partial class LoginViewModel
     {
         [ObservableProperty]
         private string _name;

@@ -50,6 +50,10 @@
 
 	<ItemGroup>
 	  <None Remove="Resources\Images\flower.png" />
+	  <None Remove="Resources\Images\icon_about.svg" />
+	  <None Remove="Resources\Images\icon_buddies.svg" />
+	  <None Remove="Resources\Images\icon_home.svg" />
+	  <None Remove="Resources\Images\icon_prefs.svg" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -61,6 +65,15 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="View\AboutPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BuddiesPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\BuddyDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="View\LoginPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

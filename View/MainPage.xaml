@@ -39,7 +39,7 @@
                     <TapGestureRecognizer Command="{Binding ImageTappedCommand}" NumberOfTapsRequired="2" />
                 </Image.GestureRecognizers>
             </Image>
+
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>
