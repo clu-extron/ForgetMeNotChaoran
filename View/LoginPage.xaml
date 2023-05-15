@@ -3,80 +3,115 @@
     x:Class="ForgetMeNotChaoran.View.LoginPage"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:behaviors="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     xmlns:com="http://schemas.microsoft.com/appx/manifest/com/windows10"
     xmlns:desktop="http://schemas.microsoft.com/appx/manifest/desktop/windows10"
-    xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
     Title="Login Page">
-    <ContentPage.Resources>
-        <Style TargetType="Label">
-            <Setter Property="FontSize" Value="Medium" />
-            <Setter Property="HorizontalOptions" Value="Start" />
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="VerticalOptions" Value="Center" />
-            <Setter Property="VerticalTextAlignment" Value="Center" />
-        </Style>
-        <Style x:Key="BaseExplicitLabel" TargetType="Label">
-            <Setter Property="FontSize" Value="Medium" />
-            <Setter Property="HorizontalOptions" Value="Start" />
-            <Setter Property="Margin" Value="10" />
-            <Setter Property="VerticalOptions" Value="Center" />
-            <Setter Property="VerticalTextAlignment" Value="Center" />
-        </Style>
-        <Style
-            x:Key="LargeLabel"
-            BasedOn="{StaticResource BaseExplicitLabel}"
-            TargetType="Label">
-            <Setter Property="FontSize" Value="Large" />
-        </Style>
-        <Style
-            x:Key="SmallLabel"
-            BasedOn="{StaticResource BaseExplicitLabel}"
-            TargetType="Label">
-            <Setter Property="FontSize" Value="Small" />
-        </Style>
-    </ContentPage.Resources>
     <VerticalStackLayout x:Name="LoginStackLayout">
-        <HorizontalStackLayout WidthRequest="300">
-            <Label Style="{StaticResource LargeLabel}" Text="User Name" />
-            <Entry
+        <Grid
+            x:Name="LoginGrid"
+            ColumnDefinitions="*,*,*"
+            RowDefinitions="*,*,*,*,*">
+            <Label
+                Grid.Row="0"
+                Grid.Column="0"
+                Margin="5,20,0,10"
                 HorizontalOptions="End"
+                Text="User Name"
+                VerticalOptions="Center" />
+            <Entry
+                Grid.Row="0"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                Margin="5,20,0,10"
+                HorizontalOptions="Center"
                 Placeholder="User Name"
                 Text="{Binding Name}"
+                VerticalOptions="End"
                 WidthRequest="150" />
-        </HorizontalStackLayout>
-        <HorizontalStackLayout WidthRequest="300">
-            <Label Style="{StaticResource SmallLabel}" Text="Password" />
-            <Frame BorderColor="Blue" CornerRadius="5">
-                <Entry
-                    HorizontalOptions="End"
-                    IsPassword="True"
-                    Placeholder="Password"
-                    Text="{Binding Password}"
-                    WidthRequest="150" />
+            <Label
+                Grid.Row="1"
+                Grid.Column="0"
+                Margin="5,10"
+                HorizontalOptions="End"
+                Text="Password"
+                VerticalOptions="Center" />
+            <Entry
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                HorizontalOptions="Center"
+                IsPassword="True"
+                Placeholder="Password"
+                Text="{Binding Password}"
+                VerticalOptions="Start"
+                WidthRequest="150" />
+            <BoxView
+                Grid.Row="2"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Margin="0,10"
+                HeightRequest="2"
+                WidthRequest="400"
+                Color="Red" />
+            <Frame
+                Grid.Row="3"
+                Grid.Column="0"
+                BorderColor="Blue"
+                CornerRadius="10"
+                HasShadow="True"
+                HeightRequest="50"
+                WidthRequest="50">
+                <Frame.Background>
+                    <LinearGradientBrush EndPoint="1,0">
+                        <GradientStop Offset="0.2" Color="Yellow" />
+                        <GradientStop Offset="0.1" Color="Red" />
+                    </LinearGradientBrush>
+                </Frame.Background>
             </Frame>
-        </HorizontalStackLayout>
-        <BoxView
-            Margin="0,20"
-            HeightRequest="2"
-            WidthRequest="400"
-            Color="Red" />
-        <HorizontalStackLayout Margin="10,10,10,0">
+            <Frame
+                Grid.Row="3"
+                Grid.Column="1"
+                Grid.ColumnSpan="2"
+                BorderColor="Blue"
+                CornerRadius="10"
+                HasShadow="True"
+                HeightRequest="50"
+                WidthRequest="100">
+                <Frame.Background>
+                    <RadialGradientBrush>
+                        <GradientStop Offset="0.2" Color="Yellow" />
+                        <GradientStop Offset="0.1" Color="Red" />
+                    </RadialGradientBrush>
+                </Frame.Background>
+            </Frame>
             <Button
+                Grid.Row="4"
+                Grid.Column="0"
                 Margin="5"
                 BackgroundColor="Gray"
                 Command="{Binding SubmitCommand}"
                 Text="Submit" />
             <Button
+                Grid.Row="4"
+                Grid.Column="1"
                 Margin="5"
                 BackgroundColor="Gray"
                 Command="{Binding CreateCommand}"
                 Text="Create Account" />
             <Button
+                Grid.Row="4"
+                Grid.Column="2"
                 Margin="5"
                 BackgroundColor="Gray"
                 Clicked="OnForgotPassword"
                 Text="Forgot Password" />
-        </HorizontalStackLayout>
-        <Label x:Name="CreateAccount" Text="Create account?" />
+            <Label
+                x:Name="CreateAccount"
+                Grid.Row="5"
+                Grid.Column="0"
+                Grid.ColumnSpan="3"
+                Text="" />
+        </Grid>
     </VerticalStackLayout>
 </ContentPage>
