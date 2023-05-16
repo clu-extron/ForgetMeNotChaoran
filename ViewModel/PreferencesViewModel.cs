@@ -13,7 +13,7 @@ namespace ForgetMeNotChaoran.ViewModel
     public partial class PreferencesViewModel
     {
         [ObservableProperty]
-        private List<Preference> _preferences;
+        private List<Preference> _preferenceList;
 
         private readonly PreferenceService _service;
 
