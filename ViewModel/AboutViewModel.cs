@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,13 @@ namespace ForgetMeNotChaoran.ViewModel
         public AboutViewModel()
         {
             _apiVersion = "1.0";
+        }
+
+        [RelayCommand]
+        public async Task OpenPreferences()
+        {
+            await Shell.Current.GoToAsync($"userpreferences");
+
         }
     }
 }

@@ -36,5 +36,10 @@
             Text="Concept and original design by Robin Liberty"
             VerticalTextAlignment="Center" />
         <Label FontSize="Small" Text="Icons from IconScout: https://iconscout.com" />
+        <Button
+            Margin="10,50,10,0"
+            Command="{Binding OpenPreferencesCommand}"
+            Text="Preferences"
+            WidthRequest="150" />
     </VerticalStackLayout>
 </ContentPage>
