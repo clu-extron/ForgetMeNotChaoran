@@ -24,7 +24,7 @@ namespace ForgetMeNotChaoran.ViewModel
 
         public async Task Init()
         {
-            Preferences = await _service.GetPreferences();
+            PreferenceList = await _service.GetPreferences();
         }
     }
 }
