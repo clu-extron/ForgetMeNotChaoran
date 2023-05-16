@@ -19,6 +19,13 @@ namespace ForgetMeNotChaoran.ViewModel
         private bool _wifiOnly;
         public string ThemeGroupName => "Theme";
 
+        public UserPreferencesViewModel()
+        {
+            _displayName = Preferences.Default.Get("DisplayName", "Unknown");
+            _themeSelection = Preferences.Default.Get("ThemeSelection", "Light");
+            _wifiOnly = Preferences.Default.Get("WifiOnly", false);
+        }
+
         [RelayCommand]
         public async Task SavePreferences()
         {
