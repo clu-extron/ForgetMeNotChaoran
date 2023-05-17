@@ -11,6 +11,8 @@ namespace ForgetMeNotChaoran.Model
     public partial class Preference
     {
         [ObservableProperty]
+        private int _id;
+        [ObservableProperty]
         private string _preferencePrompt;
         [ObservableProperty]
         private string _preferenceValue;
