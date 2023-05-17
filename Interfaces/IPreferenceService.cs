@@ -4,6 +4,7 @@ namespace ForgetMeNotChaoran.Interfaces
 {
     public interface IPreferenceService
     {
-        Task<List<Preference>> GetPreferences();
+        public Task<List<Preference>> GetPreferences();
+        public Task<List<Preference>> GetPreferencesMock();
     }
 }

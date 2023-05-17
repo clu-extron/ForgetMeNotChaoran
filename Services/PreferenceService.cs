@@ -15,7 +15,7 @@ namespace ForgetMeNotChaoran.Services
             return await GetPreferencesMock();
         }
 
-        private async Task<List<Preference>> GetPreferencesMock()
+        public async Task<List<Preference>> GetPreferencesMock()
         {
             List<Preference> preferences = new()
             {

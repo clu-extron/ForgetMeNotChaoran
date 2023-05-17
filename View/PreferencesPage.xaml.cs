@@ -7,9 +7,9 @@ namespace ForgetMeNotChaoran.View;
 public partial class PreferencesPage : ContentPage
 {
 	private PreferencesViewModel _vm;
-	public PreferencesPage()
+	public PreferencesPage(PreferencesViewModel preferencesVM)
 	{
-		_vm = new();
+		_vm = preferencesVM;
 		BindingContext = _vm;
 		InitializeComponent();
 	}

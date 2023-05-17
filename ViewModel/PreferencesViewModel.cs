@@ -16,11 +16,11 @@ namespace ForgetMeNotChaoran.ViewModel
         [ObservableProperty]
         private List<Preference> _preferenceList;
 
-        private readonly PreferenceService _service;
+        private readonly IPreferenceService _service;
 
-        public PreferencesViewModel()
+        public PreferencesViewModel(IPreferenceService service)
         {
-            _service = new();
+            _service = service;
         }
 
         public async Task Init()
