@@ -1,4 +1,5 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using ForgetMeNotChaoran.Interfaces;
 using ForgetMeNotChaoran.Model;
 using ForgetMeNotChaoran.Services;
 using System;

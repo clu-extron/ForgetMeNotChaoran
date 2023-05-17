@@ -1,4 +1,5 @@
-﻿using ForgetMeNotChaoran.Model;
+﻿using ForgetMeNotChaoran.Interfaces;
+using ForgetMeNotChaoran.Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ForgetMeNotChaoran.Services
 {
-    public class PreferenceService
+    public class PreferenceService : IPreferenceService
     {
         public async Task<List<Preference>> GetPreferences()
         {
