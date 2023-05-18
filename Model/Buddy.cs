@@ -29,6 +29,10 @@ namespace ForgetMeNotChaoran.Model
         private string? _linkedIn;
         [ObservableProperty]
         private string? _venmoName;
+        //[ObservableProperty]
+        //private InvitationStatus _status;
+        //[ObservableProperty]
+        //private List<OccasionModel> _occations;
         [ObservableProperty]
         private DateTime _buddySince;
     }

@@ -5,7 +5,13 @@ VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForgetMeNotChaoran", "ForgetMeNotChaoran.csproj", "{DC8E5BA0-DE89-4A1E-9CDC-8EA86217D2B7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeNotChaoran.Tests", "..\ForgetMeNotChaoran.Tests\ForgetMeNotChaoran.Tests.csproj", "{03102D3C-6940-47CE-B060-0C3DE2D0F600}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ForgetMeNotChaoran.Tests", "..\ForgetMeNotChaoran.Tests\ForgetMeNotChaoran.Tests.csproj", "{03102D3C-6940-47CE-B060-0C3DE2D0F600}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeNotChaoran.Api.Domain", "..\ForgetMeNotChaoran.API.Domain\ForgetMeNotChaoran.Api.Domain.csproj", "{9B964DDF-431B-42DF-B49D-5E064EA030DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeNotChaoran.Dto", "..\ForgetMeNotChaoran.Dto\ForgetMeNotChaoran.Dto.csproj", "{46E6BC1D-55AB-4F6B-A752-28415795AF17}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ForgetMeNotChaoran.ApiClient", "..\ForgetMeNotChaoran.ApiClient\ForgetMeNotChaoran.ApiClient.csproj", "{5D1938C8-1196-4E75-9A9C-E1E09374C5F6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +29,18 @@ Global
 		{03102D3C-6940-47CE-B060-0C3DE2D0F600}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{03102D3C-6940-47CE-B060-0C3DE2D0F600}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{03102D3C-6940-47CE-B060-0C3DE2D0F600}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B964DDF-431B-42DF-B49D-5E064EA030DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B964DDF-431B-42DF-B49D-5E064EA030DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B964DDF-431B-42DF-B49D-5E064EA030DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B964DDF-431B-42DF-B49D-5E064EA030DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46E6BC1D-55AB-4F6B-A752-28415795AF17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46E6BC1D-55AB-4F6B-A752-28415795AF17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46E6BC1D-55AB-4F6B-A752-28415795AF17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46E6BC1D-55AB-4F6B-A752-28415795AF17}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5D1938C8-1196-4E75-9A9C-E1E09374C5F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5D1938C8-1196-4E75-9A9C-E1E09374C5F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5D1938C8-1196-4E75-9A9C-E1E09374C5F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5D1938C8-1196-4E75-9A9C-E1E09374C5F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
